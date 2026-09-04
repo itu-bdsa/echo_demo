@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0DD3E2ED-08C1-4CF1-8671-669C19C4B0DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EchoLoop.CLI", "src\EchoLoop.CLI\EchoLoop.CLI.csproj", "{CD2AE1DB-BCDC-4A97-88D6-B91A501C505B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{F2E5E282-D58A-46F1-A05A-EEAAAE20C86A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EchoLoop.Tests", "test\EchoLoop.Tests\EchoLoop.Tests.csproj", "{EB27FF04-0E12-447B-A94D-7019C8CBA610}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD2AE1DB-BCDC-4A97-88D6-B91A501C505B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD2AE1DB-BCDC-4A97-88D6-B91A501C505B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD2AE1DB-BCDC-4A97-88D6-B91A501C505B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD2AE1DB-BCDC-4A97-88D6-B91A501C505B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB27FF04-0E12-447B-A94D-7019C8CBA610}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB27FF04-0E12-447B-A94D-7019C8CBA610}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB27FF04-0E12-447B-A94D-7019C8CBA610}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB27FF04-0E12-447B-A94D-7019C8CBA610}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CD2AE1DB-BCDC-4A97-88D6-B91A501C505B} = {0DD3E2ED-08C1-4CF1-8671-669C19C4B0DC}
+		{EB27FF04-0E12-447B-A94D-7019C8CBA610} = {F2E5E282-D58A-46F1-A05A-EEAAAE20C86A}
+	EndGlobalSection
+EndGlobal
