@@ -1,31 +1,29 @@
-# echo_demo Part 2
-## Add FsCheck as a dependency
+# echo_demo Part 3
 
-```
-dotnet add test/EchoLoop.Tests package FsCheck.Xunit
-```
+## Parameters
 
-## Add tests
-
-```
-    // Length invariant: n copies means n elements, all equal to the input.
-    [Property]
-    public bool Repeat_ProducesExactlyCountCopies(NonEmptyString m, NonNegativeInt n)
-    {
-        var result = Repeater.Repeat(m.Get, n.Get);
-        return result.Count == n.Get && result.All(x => x == m.Get);
-    }
-
-```
-If necessary, also add these imports
-```
-using FsCheck;
-using FsCheck.Fluent;
-using FsCheck.Xunit;
+```bash
+dotnet add    test/EchoLoop.Tests package coverlet.msbuild
+dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:CoverletOutput=./coverage/
 ```
 
-## Run tests
+Coverage is printed as a table in the console and written to ./coverage/.
+Runt the following: The build fails if line coverage is below 80%.
 
+```bash
+dotnet test /p:CollectCoverage=true /p:Threshold=80 /p:ThresholdType=line,branch,method /p:ThresholdStat=total
 ```
-dotnet test
+
+### Configuration
+
+Add to `test/EchoLoop.Tests/EchoLoop.Tests.csproj` so the flags are saved for every run. The below should pass `dotnet test`, as the threshold is now at 40.
+
+```xml
+<PropertyGroup>
+  <CollectCoverage>true</CollectCoverage>
+  <CoverletOutputFormat>cobertura</CoverletOutputFormat>
+  <CoverletOutput>./coverage/</CoverletOutput>
+  <Threshold>40</Threshold>
+  <ThresholdType>line</ThresholdType>
+</PropertyGroup>
 ```
