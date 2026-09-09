@@ -13,6 +13,8 @@ dotnet add test/EchoLoop.Tests package FsCheck.Xunit
     public bool Repeat_ProducesExactlyCountCopies(NonEmptyString m, NonNegativeInt n)
     {
         var result = Repeater.Repeat(m.Get, n.Get);
+        Console.WriteLine(m);
+        Console.WriteLine(n);
         return result.Count == n.Get && result.All(x => x == m.Get);
     }
 
