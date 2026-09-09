@@ -11,7 +11,7 @@ Coverage is printed as a table in the console and written to ./coverage/.
 Runt the following: The build fails if line coverage is below 80%.
 
 ```bash
-dotnet test /p:CollectCoverage=true /p:Threshold=80 /p:ThresholdType=line,branch,method /p:ThresholdStat=total
+dotnet test /p:CollectCoverage=true /p:Threshold=80 /p:ThresholdType=\"line,branch,method\" /p:ThresholdStat=total
 ```
 
 ### Configuration
